@@ -13,23 +13,23 @@
 <body>
 
   <div class="row min-vh-100 no-gutters">
-    <header class="col-12 col-lg-3 bg-dark text-light d-flex flex-column p-4 p-lg-3">
+    <header class="col-12 col-lg-3 bg-dark text-light sticky-top d-flex flex-column p-4 p-lg-3">
       <h1 class="text-center">Taskmaster Pro Edition</h1>
       <button id="create-task" class="btn btn-block btn-success" data-toggle="modal" data-target="#task-form-modal">Add
         Task</button>
       <button id="remove-tasks" class="btn btn-block btn-danger">Delete All Tasks</button>
-      <p class="mt-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi voluptas architecto ipsa
+      <p class="mt-auto d-none d-log-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi voluptas architecto ipsa
         excepturi aut non
         laudantium sequi fugit officiis optio deleniti asperiores rem eius laborum maxime blanditiis culpa, quis iste?
       </p>
     </header>
-    <main class="col-12 col-lg-9">
+    <main class="col-12 col-lg-9 d-flex flex-column">
 
     <div class="m-5 row justify-content-around"> <!--modified in 5.2.4-->
         <!-- todo start -->
         <div class="col-12 col-md-6 col-xl-3 mb-3">
           <div class="card">
-          <h4 class="card-header">To Do
+          <h4 class="card-header bg-dark text-light">To Do
           </h4>
           <ul id="list-toDo" class="list-group list-group-flush">
           <li class="list-group-item">
@@ -44,7 +44,7 @@
         <!-- in progress start -->
         <div class="col-12 col-md-6 col-xl-3 mb-3">
           <div class="card">
-          <h4 class="card-header">In Progress
+          <h4 class="card-header bg-dark text-light">In Progress
           </h4>
           <ul id="list-inProgress" class="list-group list-group-flush">
             <li class="list-group-item">
@@ -59,7 +59,7 @@
         <!-- in review start -->
         <div class="col-12 col-md-6 col-xl-3 mb-3">
           <div class="card">
-          <h4 class="card-header">In Review
+          <h4 class="card-header bg-dark text-light">In Review
           </h4>
           <ul id="list-inReview" class=" list-group list-group-flush">
             <li class="list-group-item">
@@ -73,7 +73,7 @@
         <!-- done start -->
         <div class="col-12 col-md-6 col-xl-3 mb-3">
           <div class="card">
-          <h4 class="card-header">Done
+          <h4 class="card-header bg-dark text-light">Done
           </h4>
           <ul id="list-done" class=" list-group list-group-flush">
             <li class="list-group-item">
@@ -85,7 +85,16 @@
         </div>
         <!-- done end -->
       </div>
+      <div id="trash" class="mt-auto"> <!--added in 5.2.6-->
+        <div class="w-100 bg-danger p-3 text-center text-light display-4">
+          Drop Here to Remove.
+        </div>
+      </div>
+
+</main>
 <!--End of modification-->
+
+
 
   <!-- Modal -->
   <div class="modal fade" id="task-form-modal" tabindex="-1" role="dialog" aria-labelledby="task-form-modal"
